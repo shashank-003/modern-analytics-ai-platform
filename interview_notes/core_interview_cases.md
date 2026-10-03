@@ -447,6 +447,277 @@ I would instrument metrics such as:
 This would allow the analytics team's effectiveness to be measured using business impact and adoption rather than simply the number of dashboards delivered.
 
 ## 2. 6x Pickup Revenue Growth
+# Case Study 2 — Growing Store-Pickup Revenue ~6×
+
+## Context
+
+Third Wave customers had the option to place a store-pickup order through the mobile app.
+
+Customers could order in advance and collect their coffee approximately 15–20 minutes later from the selected store, reducing in-store waiting time.
+
+The business wanted to increase adoption of this behavior, partly inspired by the pickup model used by global coffee chains such as Starbucks.
+
+---
+
+## Baseline
+
+At the time:
+
+- monthly pickup revenue was approximately ₹4–5 lakh,
+- pickup adoption was still relatively low,
+- the feature was app-only,
+- usage appeared concentrated among high-frequency, high-value customers.
+
+I do not recall the exact pickup order count or share of total company revenue, so those numbers should not be quoted unless verified.
+
+---
+
+## Business Problem
+
+The core business question was:
+
+> Which customers were most likely to adopt pickup, and how could we increase repeat pickup behavior rather than just drive one-time trial?
+
+The opportunity was attractive because the existing pickup users tended to be:
+
+- high-frequency customers,
+- relatively high-value customers,
+- weekday-heavy users,
+- and customers likely to benefit from time savings.
+
+This made pickup potentially valuable not only as a revenue channel but also as a retention and convenience proposition for frequent customers, especially office-goers.
+
+The desired outcome was to make ordering coffee more convenient for customers who wanted to avoid waiting in-store before work or during short breaks.
+
+---
+
+## Primary KPI
+
+### Primary KPI
+
+**Monthly pickup revenue**
+
+### Driver Metrics
+
+- number of pickup customers,
+- orders per pickup customer,
+- pickup AOV,
+- repeat pickup rate,
+- frequency of pickup usage.
+
+### Guardrails
+
+- total company revenue,
+- store operational load,
+- customer wait time / pickup readiness,
+- excessive dependence on discounts.
+
+---
+
+## Analysis / Segmentation
+
+I first analyzed customers who had used pickup during the previous 3–6 months and created a behavioral profile of existing pickup users.
+
+The analysis showed several patterns:
+
+- pickup customers tended to be high-frequency cafe customers,
+- usage was concentrated more on weekdays than weekends,
+- users were necessarily app customers because pickup was an app-only feature,
+- adoption was concentrated around a smaller number of stores,
+- some of the highest-usage stores were located near office clusters.
+
+Based on these patterns, I created a rough high-propensity customer profile.
+
+The most relevant behavioral signal was **order frequency**.
+
+---
+
+## Key Insight
+
+Customers with very high purchase frequency — roughly those making more than 3–4 orders per week — appeared much more likely to use pickup.
+
+This suggested that the best initial audience was not the entire customer base.
+
+Instead, we should focus on highly engaged app customers who already had frequent cafe consumption behavior and were more likely to value speed and convenience.
+
+---
+
+## Action
+
+I created a targeted customer segment focused on the highest-frequency app customers, approximately the top 10% by order frequency.
+
+The campaign strategy included:
+
+- targeted app push notifications,
+- pickup-specific messaging,
+- and an introductory incentive for the first few pickup orders to reduce the barrier to trial.
+
+The broader objective was not only to generate first-time pickup orders but to establish repeat pickup behavior.
+
+Marketing owned campaign execution and communication.
+
+---
+
+## My Contribution
+
+I owned the analytics side of the initiative.
+
+My contribution included:
+
+- analyzing historical pickup-user behavior,
+- identifying the strongest customer characteristics associated with pickup adoption,
+- defining the high-propensity target segment,
+- providing the customer list / segmentation logic to Marketing,
+- defining the primary business metric and supporting driver metrics,
+- and monitoring pickup performance after the campaign launched.
+
+I also helped distinguish whether growth was coming from more pickup customers, higher frequency, or changes in AOV.
+
+[VERIFY the exact extent of post-campaign monitoring.]
+
+---
+
+## Measurement
+
+There was no randomized A/B test or formal control group.
+
+Therefore, I would not claim that the campaign alone caused the full revenue increase.
+
+The measurement approach was based primarily on:
+
+- pre- vs post-initiative pickup revenue,
+- pickup customer growth,
+- repeat usage,
+- and order frequency among targeted customers.
+
+The appropriate way to describe the result is:
+
+> Pickup revenue increased approximately 6× following the targeted initiative.
+
+Other factors such as organic growth, new stores, seasonality, and broader app adoption could also have contributed.
+
+---
+
+## Result
+
+Pickup revenue increased from approximately **₹4–5 lakh per month to roughly ₹25–30 lakh per month**, representing approximately **6× growth**.
+
+The growth appeared to be driven primarily by:
+
+- increased adoption among high-frequency customers,
+- repeat pickup usage,
+- and targeted activation of customers already showing strong purchase frequency.
+
+An additional benefit was that pickup became a more visible and repeatable use case within the app rather than remaining a niche feature.
+
+[VERIFY exact end-state revenue and repeat-usage figures before quoting them externally.]
+
+---
+
+## Key Decision / Trade-off
+
+### Situation
+
+We had two broad options:
+
+1. promote pickup to the entire app customer base,
+2. target customers with the highest likelihood of repeat usage.
+
+### Decision
+
+We chose a targeted strategy focused on the highest-frequency customers rather than a broad campaign.
+
+### Why
+
+A broad campaign would likely have required more discount spend and could have produced many one-time users.
+
+The targeted approach was intended to:
+
+- improve conversion efficiency,
+- reduce unnecessary promotional spend,
+- and maximize the likelihood of repeat behavior.
+
+We also used introductory discounts only as an initial activation mechanism rather than making pickup permanently discount-led.
+
+---
+
+## Stakeholder Challenge
+
+The main challenge was balancing **marketing reach** with **targeting precision**.
+
+A broader campaign could have produced more immediate exposure, but it also risked higher promotional cost and lower-quality adoption.
+
+My role was to use customer behavior data to make the case for focusing first on high-propensity users rather than sending the same campaign to everyone.
+
+This required aligning Analytics and Marketing on:
+
+- who should be targeted,
+- why that segment was selected,
+- and what success should look like beyond just campaign opens or clicks.
+
+[VERIFY whether this was the actual stakeholder discussion.]
+
+---
+
+## What I Learned
+
+### 1. Targeting quality matters more than audience size
+
+High-propensity behavioral segments can outperform broad targeting when the objective is repeat behavior rather than one-time trial.
+
+### 2. Revenue growth should be decomposed
+
+A large increase in revenue is more useful when broken into:
+
+- more customers,
+- higher frequency,
+- higher AOV,
+- and stronger repeat usage.
+
+### 3. Promotions should be evaluated beyond the promotional window
+
+The real success metric is whether customers continue using the feature after the incentive disappears.
+
+---
+
+## What I Would Do Differently Today
+
+### 1. Use a formal holdout group
+
+I would create a control / holdout group so that we could measure incremental lift rather than relying only on pre/post comparisons.
+
+This would allow us to estimate how much pickup growth was actually caused by the campaign.
+
+### 2. Track post-promotion retention
+
+I would explicitly measure:
+
+- repeat pickup rate after 7/30/60 days,
+- order frequency after the first three incentivized orders,
+- and how many users continued pickup behavior without a discount.
+
+### 3. Measure contribution margin, not only revenue
+
+I would include:
+
+- discount cost,
+- operational cost,
+- incremental margin,
+- and any cannibalization from delivery or in-store purchases.
+
+This would provide a more complete view of whether pickup growth created sustainable business value.
+
+### 4. Build a propensity model / scoring framework later
+
+Once enough behavioral data was available, I would move beyond simple rule-based segmentation and build a lightweight pickup-propensity score using variables such as:
+
+- purchase frequency,
+- recency,
+- store proximity,
+- weekday behavior,
+- app engagement,
+- and historical product preferences.
+
 
 ## 3. Recommendation System + A/B Test / AOV
 
