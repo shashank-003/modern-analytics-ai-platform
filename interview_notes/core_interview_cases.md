@@ -720,6 +720,250 @@ Once enough behavioral data was available, I would move beyond simple rule-based
 
 
 ## 3. Recommendation System + A/B Test / AOV
+# Case Study 3 — Priority-Based Recommendation Engine + A/B Test
+
+## Context
+
+Third Wave Coffee's app already showed product recommendations, but these were largely based on static rules.
+
+At the time, average Items per Transaction (IPT) was approximately **1.5**, and many customers were ordering a single beverage and checking out.
+
+This created an opportunity to improve basket size by showing more relevant cross-sell recommendations.
+
+---
+
+## Business Problem
+
+The business objective was to increase:
+
+- Items per Transaction,
+- Average Order Value,
+- and recommendation-driven add-ons,
+
+without negatively affecting checkout conversion.
+
+The existing static recommendation logic was limited because it did not sufficiently account for the customer's current basket or contextual relevance.
+
+---
+
+## Baseline
+
+- IPT: approximately **1.5**
+- Existing recommendation logic: static rules
+- AOV: **[ADD LATER]**
+- Recommendation attach rate: **[ADD LATER]**
+
+---
+
+## Recommendation Approach
+
+Because time to market was important, I chose a **priority-based recommendation approach** rather than building a more complex ML recommendation system.
+
+Candidate products were prioritized based on signals such as:
+
+- relevance to the current basket,
+- historical product affinity,
+- category complementarity,
+- popularity,
+- store availability,
+- and business rules.
+
+[VERIFY exact production logic later.]
+
+The objective was to ship a practical MVP quickly, validate whether more relevant recommendations created measurable business value, and only then justify investment in a more sophisticated model.
+
+---
+
+## Key Decision / Trade-off
+
+### Situation
+
+We could either:
+
+1. build a more sophisticated ML-based recommender, or
+2. ship a simpler priority-based recommendation system quickly.
+
+### Decision
+
+I chose the priority-based approach.
+
+### Why
+
+It was:
+
+- faster to implement,
+- easier to explain and debug,
+- lower engineering effort,
+- and sufficient to test the underlying business hypothesis.
+
+The principle was:
+
+> Validate incremental business value before investing in model sophistication.
+
+---
+
+## My Contribution
+
+I owned the analytics / recommendation design.
+
+My contribution included:
+
+- identifying basket-size improvement as the opportunity,
+- analyzing historical purchase behavior,
+- defining recommendation priority logic,
+- partnering with Product and Engineering on implementation,
+- defining the A/B test measurement framework,
+- and analyzing the experiment results.
+
+---
+
+## A/B Test Hypothesis
+
+> Showing more relevant priority-based recommendations will increase Items per Transaction and AOV without materially reducing checkout conversion.
+
+---
+
+## A/B Test Design
+
+### Control
+
+Existing static recommendation experience.
+
+### Treatment
+
+New priority-based recommendation experience.
+
+### Randomization Unit
+
+**[ADD LATER — likely user/session/order]**
+
+### Traffic Split
+
+**[ADD LATER]**
+
+### Experiment Duration
+
+**[ADD LATER]**
+
+### Primary Metric
+
+**Items per Transaction**
+
+### Secondary Metrics
+
+- Average Order Value
+- recommendation attach rate
+- recommended-item add-to-cart rate
+- revenue per order
+
+### Guardrail Metrics
+
+- checkout conversion
+- cart abandonment
+- order completion
+- app/page latency
+
+### Sample Size / Power
+
+**[ADD LATER]**
+
+---
+
+## A/B Test Result
+
+The treatment group showed a positive improvement versus the existing static recommendation experience.
+
+### Result Summary
+
+- IPT:
+  - Control: **[ADD LATER]**
+  - Treatment: **[ADD LATER]**
+  - Uplift: **[ADD LATER]%**
+
+- AOV:
+  - Control: **[ADD LATER]**
+  - Treatment: **[ADD LATER]**
+  - Uplift: **[ADD LATER]%**
+
+- Checkout conversion:
+  - **[ADD LATER]**
+
+- Statistical significance / confidence interval:
+  - **[ADD LATER]**
+
+The key result was that the recommendation approach improved basket economics while keeping the core checkout experience within acceptable guardrails.
+
+---
+
+## Interpretation
+
+The experiment suggested that the improvement was driven primarily by customers adding complementary products to existing beverage orders.
+
+The recommendation system therefore improved basket size not by changing the core purchase journey, but by increasing successful cross-sell behavior.
+
+[VERIFY exact driver once numbers are recovered.]
+
+---
+
+## Business Impact
+
+The experiment gave the business evidence that recommendation quality could be a meaningful lever for:
+
+- improving IPT,
+- improving AOV,
+- and increasing incremental order value.
+
+It also justified further investment in more sophisticated recommendation and personalization capabilities.
+
+Exact annualized or monthly business impact:
+
+**[ADD LATER]**
+
+---
+
+## Stakeholder Challenge
+
+The main trade-off was between speed to market and technical sophistication.
+
+Rather than delaying delivery to build a complex recommender, I aligned Product and Engineering around a simpler testable MVP.
+
+The A/B test allowed us to make the next investment decision using evidence rather than assuming that greater model complexity would automatically create more value.
+
+---
+
+## What I Learned
+
+1. **Experimentation is more important than model sophistication.**
+   A simpler model with a well-designed A/B test can create more business confidence than a sophisticated model without causal evidence.
+
+2. **Recommendation success should be measured using business metrics.**
+   Click-through rate is useful, but IPT, AOV, attach rate and conversion matter more.
+
+3. **Guardrails are essential.**
+   AOV growth is not useful if the recommendation experience damages checkout conversion.
+
+---
+
+## What I Would Do Differently Today
+
+I would strengthen the experiment by explicitly defining upfront:
+
+- Minimum Detectable Effect,
+- statistical power,
+- sample-size requirements,
+- experiment duration,
+- and segmentation of results.
+
+I would also analyze heterogeneous treatment effects across:
+
+- high-frequency vs low-frequency customers,
+- store type,
+- product category,
+- time of day,
+- and new vs repeat customers.
+
+If the MVP continued to show incremental value, I would then evolve the solution toward more personalized ranking using customer-level behavioral signals.
+
 
 ## 4. Medallion / Data Platform
 
